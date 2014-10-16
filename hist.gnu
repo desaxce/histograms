@@ -16,11 +16,10 @@ set grid
 set title "Page load performances"
 set xlabel "Protocol"
 set ylabel "Time in seconds"
-set yrange [0:2]
+set yrange [0:4]
 set style fill solid 
 set style fill solid
 
 plot '$1' u (column(0)):2:(0.5):(color(strcol(1))):xtic(1) w boxes fillcolor rgb variable 
-pause 10
-
+load "loop_til_escape"
 EOF
